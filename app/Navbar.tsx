@@ -1,11 +1,26 @@
+'use client'
+
+import { useState } from 'react'
 import Link from "next/link"
 import { HomeIcon, UsersIcon, XMarkIcon } from "@heroicons/react/20/solid"
 import SearchBar from "@/components/SearchBar"
 import { SignInButton } from "@/components/buttons"
 
-const Navbar = async () => {
+const Navbar = () => {
+  const [blur, setBlur] = useState(false)
+
+  const blurNav = () => {
+    if(window.scrollY >= 65) {
+      setBlur(true)
+    } else {
+      setBlur(false)
+    }
+  }
+
+  window.addEventListener('scroll', blurNav);
+
   return (
-    <div className='navbar bg-base-100 fixed z-50 h-[65px] top-0'>
+    <div className={`navbar fixed z-50 h-[65px] top-0 ${blur ? 'backdrop-blur-md' : ''} transition-all duration-200`}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className='btn btn-ghost lg:hidden btn-square p-2'>

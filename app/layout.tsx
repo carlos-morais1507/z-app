@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en" data-theme="zDark">
       <body className={inter.className}>
         <Navbar />
-        <div className='mt-[65px]'>
+        <div className='min-h-screen overflow-x-hidden'>
           {children}
         </div>
       </body>
