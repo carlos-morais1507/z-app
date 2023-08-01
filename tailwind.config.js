@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'gradient-radial': "url('/main-bg.png')",
+        'gradient-card': "url('/Card-mesh.png')",
       },
     },
   },
