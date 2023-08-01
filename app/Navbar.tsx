@@ -5,7 +5,7 @@ import { SignInButton } from "@/components/buttons"
 
 const Navbar = async () => {
   return (
-    <div className='navbar bg-base-100'>
+    <div className='navbar bg-base-100 fixed z-50 h-[65px] top-0'>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className='btn btn-ghost lg:hidden btn-square p-2'>
@@ -19,7 +19,7 @@ const Navbar = async () => {
         <Link href={'/'} className="btn btn-ghost p-2 btn-md normal-case text-xl hidden lg:flex"><img src="/z.svg" alt="Logo" className="h-full"/>App</Link>
       </div>
       <div className="navbar-center hidden lg:flex gap-3">
-      <Link href={'/'} className="btn btn-ghost normal-case">Página Principal</Link>
+      <Link href={'/'} className="btn btn-ghost normal-case">Feed</Link>
       <Link href={'/'} className="btn btn-ghost normal-case">Pessoas</Link>
       </div>
       <div className="navbar-end">

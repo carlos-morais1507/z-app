@@ -22,7 +22,9 @@ export default function RootLayout({
     <html lang="en" data-theme="zDark">
       <body className={inter.className}>
         <Navbar />
-        {children}
+        <div className='mt-[65px]'>
+          {children}
+        </div>
       </body>
     </html>
   )
