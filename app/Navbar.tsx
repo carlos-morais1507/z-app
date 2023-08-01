@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from "next/link"
 import { HomeIcon, UsersIcon, XMarkIcon } from "@heroicons/react/20/solid"
 import SearchBar from "@/components/SearchBar"
@@ -10,14 +10,19 @@ const Navbar = () => {
   const [blur, setBlur] = useState(false)
 
   const blurNav = () => {
-    if(window.scrollY >= 65) {
+    if(window.scrollY >= 35) {
       setBlur(true)
     } else {
       setBlur(false)
     }
   }
 
-  window.addEventListener('scroll', blurNav);
+  useEffect(() => {
+    window.addEventListener('scroll', blurNav);
+    return () => {
+      window.removeEventListener('scroll', blurNav);
+    };
+  }, []);
 
   return (
     <div className={`navbar fixed z-50 h-[65px] top-0 ${blur ? 'backdrop-blur-md' : ''} transition-all duration-200`}>
