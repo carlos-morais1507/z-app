@@ -25,7 +25,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className={`navbar fixed z-50 h-[65px] top-0 ${blur ? 'backdrop-blur-md' : ''} transition-all duration-200`}>
+    <div className={`navbar fixed z-50 h-[65px] top-0 ${blur ? 'backdrop-blur-md bg-base-100 bg-opacity-80' : ''} transition-all duration-200`}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className='btn btn-ghost lg:hidden btn-square p-2'>
