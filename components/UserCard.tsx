@@ -18,7 +18,7 @@ const UserCard = ({ id, name, bio, image }: Props) => {
         <div className='h-1/2 text-clip w-full flex flex-col items-center justify-center gap-2'>
           <h1 className='text-xl font-semibold truncate w-full text-center'>{name ?? 'Sem Nome'}</h1>
           <p className='truncate w-full text-center'>{bio ?? 'Sem bio'}</p>
-          <Link href={`/people`} className='mt-6 btn btn-outline btn-primary btn-sm backdrop-blur-sm'>Ver Perfil</Link>
+          <Link href={`/people/${id}`} className='mt-6 btn btn-outline btn-primary btn-sm backdrop-blur-sm'>Ver Perfil</Link>
         </div>
       </div>
     </div>
