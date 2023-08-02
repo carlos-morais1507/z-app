@@ -15,7 +15,7 @@ export async function PUT(req: Request) {
       email: currentUserEmail,
     },
     data,
-  })
+  });
 
   return NextResponse.json(user);
 }
