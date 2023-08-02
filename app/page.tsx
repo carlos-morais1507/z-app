@@ -11,7 +11,7 @@ export default function Home() {
             <Link href={'/'} className="btn btn-outline backdrop-blur-sm btn-secondary">
               Meu Feed
             </Link>
-            <Link href={'/'} className="btn backdrop-blur-sm btn-outline btn-primary">
+            <Link href={'/dashboard'} className="btn backdrop-blur-sm btn-outline btn-primary">
               Minha Conta
             </Link>
           </div>
