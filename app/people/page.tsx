@@ -2,6 +2,8 @@ import UserCard from "@/components/UserCard"
 import { UsersIcon } from "@heroicons/react/24/solid"
 import { prisma } from "@/lib/prisma"
 
+export const dynamic = 'force-dynamic'
+
 export default async function People() {
   const users = await prisma.user.findMany();
 
