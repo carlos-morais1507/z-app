@@ -18,7 +18,7 @@ export async function FollowButton({ targetUserId }: Props) {
     where: { followerId: currentUserId, followingId: targetUserId },
   });
 
-  if(currentUserId === targetUserId) {
+  if((currentUserId === targetUserId) || (!session)) {
     return <button className="btn btn-sm" disabled >Seguir</button>
   }
 
