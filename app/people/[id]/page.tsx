@@ -2,6 +2,7 @@ import { prisma } from '@/lib/prisma';
 import { Metadata } from 'next';
 import { StarIcon, PaperAirplaneIcon } from '@heroicons/react/20/solid';
 import { FollowButton } from '@/components/FollowButton/FollowButton';
+import Link from 'next/link';
 
 
 interface Props {
@@ -25,9 +26,9 @@ export default async function UserProfile({ params }: Props) {
           <div className='p-3'>
             <h1 className=' text-3xl md:text-4xl font-bold'>{user?.name}</h1>
             <p>{user?.bio}</p>
-            <div className='opacity-70 text-sm flex gap-1 items-center'>
+            <Link href={`/people/${user?.id}/followers`} className='opacity-70 text-sm flex gap-1 items-center'>
              <StarIcon className='h-4' /> {followers.length} • <PaperAirplaneIcon className='ml-2 h-4'/> {posts.length}
-            </div>
+            </Link>
             <div className='mt-5'>
               <FollowButton targetUserId={params.id} />
             </div>
