@@ -21,8 +21,8 @@ const Post = () => {
         <FollowButton targetUserId=''/>
       </div>
       <div>
-        <p className='md:text-md text-sm text-justify'>
-          Chasing sunsets, collecting memories. 🌅✨ Laugh a little louder, love a little deeper. 💖 Embracing every moment and creating my own sunshine. ☀️💫 #ChasingDreams #JoyfulLife
+        <p className='md:text-md text-sm text-justify break-words'>
+        Chasing sunsets, collecting memories. 🌅✨ Laugh a little louder, love a little deeper. 💖 Embracing every moment and creating my own sunshine. ☀️💫 #ChasingDreams #JoyfulLifeeeeee eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
         </p>
       </div>
       <div>
