@@ -19,6 +19,12 @@ export default async function Dashboard() {
       email: currentUserEmail,
     }
   });
+  const cardUser = {
+    id: user?.id ?? '',
+    name: user?.name ?? null,
+    bio: user?.bio ?? null,
+    image: user?.image ?? null,
+  };
 
   return (
     <main className=" mt-[65px] px-12 pt-6">
@@ -27,7 +33,7 @@ export default async function Dashboard() {
         <h1 className="text-3xl lg:text-6xl">Editar Perfil</h1>
       </div>
       <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full h-full p-6">
-        <UserCard {...user} />
+        <UserCard {...cardUser} />
         <div className="md:h-96 h-36 border-[1px] border-slate-500 rounded-full"/>
         <ProfileForm user={user} />
       </div>
