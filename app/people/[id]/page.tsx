@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { StarIcon, PaperAirplaneIcon } from '@heroicons/react/20/solid';
 import { FollowButton } from '@/components/FollowButton/FollowButton';
 import Link from 'next/link';
+import Post from '@/components/Post';
 
 
 interface Props {
@@ -22,7 +23,7 @@ export default async function UserProfile({ params }: Props) {
         <img src={user?.bannerImage ?? '/main-bg.png'} alt="Banner" className='w-screen h-40 md:h-72 object-cover object-center'/>
         <div className='absolute top-0 w-screen h-40 md:h-72 bg-gradient-to-b from-base-100 to-transparent' />
         <div className='flex'>
-          <img src={user?.image ?? '/user.png'} alt="Foto de Perfil" className='w-36 md:w-56 rounded-full md:-translate-y-20 -translate-y-12 ml-6 avatar ring-base-100 ring-8 squa'/>
+          <img src={user?.image ?? '/user.png'} alt="Foto de Perfil" className='w-36 md:w-56 h-36 md:h-56 rounded-full md:-translate-y-20 -translate-y-12 ml-6 avatar ring-base-100 ring-8 aspect-square'/>
           <div className='p-3'>
             <h1 className=' text-3xl md:text-4xl font-bold'>{user?.name}</h1>
             <p>{user?.bio}</p>
@@ -34,6 +35,11 @@ export default async function UserProfile({ params }: Props) {
             </div>
           </div>
         </div>
+      </div>
+      <div className='px-12 flex flex-col gap-3'>
+        {posts.map((post) => (
+          <Post {...post} />
+        ))}
       </div>
     </div>
   )

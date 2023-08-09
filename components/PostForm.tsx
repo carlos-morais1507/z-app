@@ -27,11 +27,11 @@ const PostForm = () => {
 
   return (
     <form className="flex flex-col gap-3 max-h-64">
-      <input
-        type="text"
+      <textarea
         name="post"
         id="post"
-
+        cols={25}
+        rows={10}
         maxLength={250}
         className="textarea textarea-primary"
         value={post}
