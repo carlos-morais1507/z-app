@@ -1,8 +1,10 @@
 'use client'
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const PostForm = () => {
+  const router = useRouter()
   const [post, setPost] = useState('');
 
   const sendPost = async (e: any) => {
@@ -23,6 +25,7 @@ const PostForm = () => {
   
     const data = response
     console.log(data);
+    router.refresh()
   }
 
   return (

@@ -16,7 +16,9 @@ export default async function People() {
       </div>
         <div className="w-full p-6 flex flex-col gap-5">
           <PostForm />
-          {posts.map((post)=> { return<Post {...post}/> })}
+          <div className="w-full flex flex-col-reverse gap-3">
+            {posts.map((post)=> { return<Post {...post}/> })}
+          </div>
         </div>
     </main>
   )

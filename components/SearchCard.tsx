@@ -20,7 +20,7 @@ const SearchCard = ({ targetUserId }: Props) => {
   const [users, setUsers] = useState<User[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/users')
+    fetch('/api/users')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network Response was not ok.');
