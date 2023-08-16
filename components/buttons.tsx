@@ -25,4 +25,4 @@ export function SignInButton() {
         </ul>
       </div>
     )
-  }
+}

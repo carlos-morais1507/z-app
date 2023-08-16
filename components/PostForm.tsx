@@ -6,9 +6,12 @@ import { useState } from "react";
 const PostForm = () => {
   const router = useRouter()
   const [post, setPost] = useState('');
+  const [loading, setLoading] = useState(false)
 
   const sendPost = async (e: any) => {
     e.preventDefault();
+
+    setLoading(true)
   
     const response = await fetch('/api/post', {
       method: 'POST',
@@ -25,7 +28,9 @@ const PostForm = () => {
   
     const data = response
     console.log(data);
+    setLoading(false)
     router.refresh()
+    alert("Post enviado!")
   }
 
   return (
@@ -41,7 +46,7 @@ const PostForm = () => {
         onChange={(e) => setPost(e.target.value)}
       />
       <button type="submit" onClick={sendPost} className="btn btn-primary">
-        Enviar
+        {loading ? (<span className="loading loading-spinner"></span>) : (<span>Enviar</span>)}
       </button>
     </form>
   );

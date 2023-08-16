@@ -36,7 +36,7 @@ export default async function UserProfile({ params }: Props) {
           </div>
         </div>
       </div>
-      <div className='px-12 flex flex-col gap-3'>
+      <div className='px-12 flex flex-col-reverse gap-3'>
         {posts.map((post) => (
           <Post {...post} />
         ))}

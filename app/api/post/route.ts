@@ -2,6 +2,7 @@ import { getServerSession } from "next-auth";
 import { NextResponse } from "next/server";
 import { authOptions } from "../auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
+import { NextApiRequest, NextApiResponse } from "next";
 
 export async function POST(req: Request, res: Response) {
   const session = await getServerSession(authOptions);
@@ -23,4 +24,3 @@ export async function POST(req: Request, res: Response) {
 
   return NextResponse.json(record);
 }
-
